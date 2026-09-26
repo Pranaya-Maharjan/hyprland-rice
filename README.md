@@ -53,44 +53,10 @@ First time creating dotfiles — may be buggy. Feedback welcome!
 - ranger
 ## Installation
 
-### Easy install (recommended)
+### clone the repo first
+git clone https://github.com/Pranaya-Maharjan/hyprland-rice.git
 
-```bash
-git clone https://github.com/Pranaya-Maharjan/hyprland-rice.git /tmp/rice
-bash /tmp/rice/install.sh
+### copy the .config into your .config
+cd hyprland-rice
+cp .config ~/.config
 
-### Manual install (bare repo)
-
-For users who want Git-based updates (`dot pull` to sync future changes):
-
-```bash
-# 1. Clone the repo as a bare repository
-git clone --bare https://github.com/Pranaya-Maharjan/hyprland-rice.git $HOME/.dotfiles
-
-# 2. Set up the 'dot' alias
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# Add the alias to your shell config (Fish shown here):
-echo "alias dot='/usr/bin/git --git-dir=\$HOME/.dotfiles/ --work-tree=\$HOME'" >> $HOME/.config/fish/config.fish
-
-# For Bash users, use ~/.bashrc instead:
-# echo "alias dot='/usr/bin/git --git-dir=\$HOME/.dotfiles/ --work-tree=\$HOME'" >> $HOME/.bashrc
-
-# 3. Check out the files
-dot checkout
-
-# 4. Hide untracked files (so `dot status` stays clean)
-dot config --local status.showUntrackedFiles no
-```
-
-> ⚠️ **If `dot checkout` errors about files already existing**, move your old configs aside first:
-> ```bash
-> mv ~/.config/hypr ~/.config/hypr.backup
-> mv ~/.config/waybar ~/.config/waybar.backup
-> # ...and so on for any folder the repo overwrites
-> ```
-
-To update later:
-```bash
-dot pull
-```
