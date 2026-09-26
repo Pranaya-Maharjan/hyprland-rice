@@ -51,19 +51,46 @@ First time creating dotfiles — may be buggy. Feedback welcome!
 - kitty (or any terminal)
 - zen-browser
 - ranger
-
 ## Installation
 
+### Easy install (recommended)
+
 ```bash
-# Clone as a bare repo
+git clone https://github.com/Pranaya-Maharjan/hyprland-rice.git /tmp/rice
+bash /tmp/rice/install.sh
+
+### Manual install (bare repo)
+
+For users who want Git-based updates (`dot pull` to sync future changes):
+
+```bash
+# 1. Clone the repo as a bare repository
 git clone --bare https://github.com/Pranaya-Maharjan/hyprland-rice.git $HOME/.dotfiles
 
-# Set up the alias
+# 2. Set up the 'dot' alias
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo "alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.config/fish/config.fish
 
-# Checkout the files
+# Add the alias to your shell config (Fish shown here):
+echo "alias dot='/usr/bin/git --git-dir=\$HOME/.dotfiles/ --work-tree=\$HOME'" >> $HOME/.config/fish/config.fish
+
+# For Bash users, use ~/.bashrc instead:
+# echo "alias dot='/usr/bin/git --git-dir=\$HOME/.dotfiles/ --work-tree=\$HOME'" >> $HOME/.bashrc
+
+# 3. Check out the files
 dot checkout
 
-# Hide untracked files
-dot config --local status.showUntrackedFiles no '''
+# 4. Hide untracked files (so `dot status` stays clean)
+dot config --local status.showUntrackedFiles no
+```
+
+> ⚠️ **If `dot checkout` errors about files already existing**, move your old configs aside first:
+> ```bash
+> mv ~/.config/hypr ~/.config/hypr.backup
+> mv ~/.config/waybar ~/.config/waybar.backup
+> # ...and so on for any folder the repo overwrites
+> ```
+
+To update later:
+```bash
+dot pull
+```
