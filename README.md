@@ -53,10 +53,21 @@ First time creating dotfiles — may be buggy. Feedback welcome!
 - ranger
 ## Installation
 
-### clone the repo first
+## Installation
+
+```bash
+# 1. Clone the repo
 git clone https://github.com/Pranaya-Maharjan/hyprland-rice.git
-
-### copy the .config into your .config
 cd hyprland-rice
-cp .config ~/.config
 
+# 2. Copy the .config folder into your home directory
+cp -r .config ~/
+```
+
+Then **log out and back in** (or reboot) to apply.
+
+> ⚠️ If you already have configs you want to keep, back them up first:
+> ```bash
+> mv ~/.config/hypr ~/.config/hypr.backup
+> mv ~/.config/waybar ~/.config/waybar.backup
+> ```
