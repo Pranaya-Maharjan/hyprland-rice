@@ -1,0 +1,89 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono Nerd Font Propo;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.01);
+    color: rgba(117, 241, 250, 1);
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+#workspaces button{
+	padding: 3px;
+	margin: 7px 0px 7px 7px;
+	background: transparent;
+	border-radius: 2px;
+	color: white;
+}
+#workspaces button.active{
+	background: rgba(117, 241, 250, 1);
+	color: black;
+	font-weight: 700;
+	border-radius: 17px;
+}
+#acces,
+#clock,
+#workspaces,
+#media{
+	border-radius: 17px;
+	padding: 0px 5px;
+	background: linear-gradient(
+	    120deg,
+	    rgba(12, 18, 30, 0.72) 0%,
+	    rgba(0, 82, 160, 0.62) 50%,
+	    rgba(0, 127, 255, 0.55) 100%
+	);
+	border: 2px solid rgba(255, 0,170, 1);
+	margin: 5px 10px 5px 0px;
+}
+#pulseaudio-slider{
+	padding: 0px;
+	margin: 0px;
+	margin-left: 8px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 8px;
+    min-width: 75px;
+    border-radius: 5px;
+    background: black;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: rgba(117, 241, 250, 1);
+}
+
+#pulseaudio-slider.muted highlight {
+    background-color: orange;
+}
+#media {
+	color: #FF00AA;
+	margin: 7px 0px 7px 80px;
+}
+#custom-media-animaiton {
+	font-size: 13px;
+	margin-right: 10px;
+}
+#custom-media-now-playing{
+	color: #75F1FA;
+	margin-right: 10px;
+}
+#custom-media-time{
+	color: #75F1FA;
+	font-size: 14px;
+}
+
