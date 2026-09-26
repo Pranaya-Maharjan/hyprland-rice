@@ -2,21 +2,21 @@
 
 My Hyprland dotfiles 
 
- First time creating dotfiles — may be buggy. Feedback welcome!
+First time creating dotfiles — may be buggy. Feedback welcome!
 
 ## Preview
 
+### Full desktop
 <img width="1920" height="1080" alt="screenshot-2026-09-27_00-37-45" src="https://github.com/user-attachments/assets/f2c0dcdd-a515-45f0-9fa1-187d4dc07811" />
-##Full desktop
 
+### Rofi powermenu
 <img width="1920" height="1080" alt="screenshot-2026-09-27_00-37-49" src="https://github.com/user-attachments/assets/3161bb4a-bb0c-4480-a8e3-c07884b990e3" />
-## Rofi powermenu
 
+### Rofi drun
 <img width="1920" height="1080" alt="screenshot-2026-09-27_00-41-05" src="https://github.com/user-attachments/assets/db717307-4b06-472b-b6f3-6798633453cc" />
-## Rofi drun
 
+### Fastfetch + Terminal
 <img width="1920" height="1080" alt="screenshot-2026-09-27_00-38-07" src="https://github.com/user-attachments/assets/84b9623b-1e13-4671-8175-11f46db42b4a" />
-## Fastfetch + Terminal
 
 
 ## What's included
@@ -61,4 +61,4 @@ echo "alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> 
 dot checkout
 
 # Hide untracked files
-dot config --local status.showUntrackedFiles no
+dot config --local status.showUntrackedFiles no '''
