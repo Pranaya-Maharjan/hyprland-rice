@@ -1,0 +1,16 @@
+configuration {
+    /* Use 'modes' instead of 'modi' */
+    modes: "drun,run,window,filebrowser,combi";
+    show-icons: true;
+}
+@theme "/usr/share/rofi/themes/arthur.rasi"
+window {
+    location: south;
+    anchor: south;
+    width: 800px;
+    height: 500px;
+    yoffset: -30px;
+}
+
+
+
