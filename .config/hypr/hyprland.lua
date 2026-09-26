@@ -24,8 +24,8 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "eDP-1",
-    mode     = "1920x1080@144",
+    output   = "",
+    mode     = "preferred",
     position = "auto",
     scale    = "1.0",
 })
@@ -47,7 +47,6 @@ local viber       = "flatpak run com.viber.Viber"
 local steam       = "steam"
 local fileexp     = "thunar"
 local emoji       = "rofimoji --action copy"
-local colors      = require("colors")
 local gimp        = "gimp"
 local lock        = "hyprlock"
 local inkscape    = "inkscape"
@@ -64,8 +63,7 @@ local inkscape    = "inkscape"
 hl.on("hyprland.start", function () 
 --	hl.exec_cmd(terminal)
         hl.exec_cmd("hyprpaper & waybar & hypridle")
-	hl.exec_cmd("hyprctl setcursor Moga-Light-Blue 24")
---        hl.exec_cmd([[sleep 3 && mpvpaper -o  "loop --volume=60" All /home/spongybucket/Videos/"final_cat.mp4"]])
+	hl.exec_cmd("if [ -d \"$HOME/.icons/Moga-Light-Blue\" ] || [ -d \"/usr/share/icons/Moga-Light-Blue\" ]; then hyprctl setcursor Moga-Light-Blue 24; fi")
  end)
 
 
@@ -293,7 +291,7 @@ hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(inkscape))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lock))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(steam))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(emoji))
-hl.bind(mainMod, hl.dsp.exec_cmd("bash /home/spongybucket/.config/rofi/powermenu/type-5/powermenu.sh"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("bash ~/.config/rofi/powermenu/type-5/powermenu.sh"))
 hl.bind(secMod .. " + Space", hl.dsp.exec_cmd(runner))
 hl.bind(secMod .. " + Backspace", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(secMod .. " + E", hl.dsp.exec_cmd(fileexp))
