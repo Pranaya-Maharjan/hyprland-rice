@@ -23,7 +23,9 @@ First time creating dotfiles — may be buggy. Feedback welcome!
 
 - **Hyprland** (Lua config — requires Hyprland 0.55+)
 - **Waybar** — top bar with custom modules
-- **Rofi** — power menu, app launcher, and runner 
+- **Rofi** — power menu, app launcher, and runner
+- **Rofi-powermenu-script** — for powermenu
+- **Rofimoji** — for emoji picker
 - **Fastfetch** — system info with custom logo
 - **Fish** — shell config with aliases
 - **Hyprpaper** — wallpaper config
@@ -34,6 +36,9 @@ First time creating dotfiles — may be buggy. Feedback welcome!
 - Hyprland 0.55+ (Lua config support)
 - Waybar
 - Rofi
+- rofi-powermenu *(AUR — install with yay or paru)*
+- rofimoji
+- wl-clipboard (required by rofimoji for copying emojis)
 - Fastfetch
 - Hyprpaper
 - Fish shell
